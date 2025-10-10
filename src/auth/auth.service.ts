@@ -48,9 +48,9 @@ export class AuthService {
         name: newUser.name,
         otpCode: otp,
       }
-      if (newUser.type !== userTypes.ADMIN) {
-        await this.mailService.sendMail('tanzin.8897@gmail.com', 'Verify email', 'mail-verification', mailPayLoad);
-      }
+      // if (newUser.type !== userTypes.ADMIN) {
+      //   await this.mailService.sendMail('tanzin.8897@gmail.com', 'Verify email', 'mail-verification', mailPayLoad);
+      // }
       return {
         success: true,
         message: newUser.type == userTypes.ADMIN ? 'Admin created successfully.' : 'Please verify your email to activate account.',

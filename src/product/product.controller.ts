@@ -21,7 +21,6 @@ export class ProductController {
   }
 
   @Get()
-  @UseGuards(AdminGuard)
   findAll() {
     return this.productService.findAll();
   }
